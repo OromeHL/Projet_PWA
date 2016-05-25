@@ -1,0 +1,156 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="author" content="Lasselin Henri">
+		<title>Time War</title>
+		<meta name = "description" content = "2D game featuring Doctor Who against the Daleks" >
+		<meta name="keywords" content = "game, doctor who, daleks, Time War" >
+		<link rel="icon" type="image/png" href="./images/favicon.ico" />
+		<link rel="stylesheet" href="./style/style.css" type = "text/css"/>	
+	</head>
+	<body>
+		<audio id="audioTrack" src="./son/I am The Doctor in Utah.mp3" type="audio/mp3" autoplay></audio>
+		<div id="container">
+			<div id="canContainer"></div>
+			<div id="info">
+				<div id="score">
+					<p>Score :</p>
+					<p id="scoreTxt"> 0 </p>
+				</div>
+				<div id="menu">
+					<div id="play">
+						<img id="playImg" src="./images/play.png" alt="play" />
+					</div>
+					<div id="replay">
+						<img id="repeatedImg" src="./images/repeated.png" alt="Recommencer" />
+					</div>
+					<div id="musique">
+						<img id="musicImg" src="./images/musicon.png" alt="son du jeu"/>
+					</div>
+				</div>
+				<div id="diffContainer">
+					<label id="diffLabel" for="difficulte">Difficulty :</label>
+					<select name="difficulte" id="difficulte">
+						<optgroup label="Normal Mode">
+							<option value="0"> - 0 - Skaro Degradation </option>
+							<option value="1"> - 1 - Human-Dalek </option>
+							<option value="2"> - 2 - Dalek puppet</option>
+							<option value="3"> - 3 - Dalek Supreme</option>
+							<option value="4"> - 4 - Dalek Prime</option>
+							<option value="5"> - 5 - Dalek Emperor</option>
+							<option value="6"> - 6 - Cult of Skaro </option>
+						</optgroup>
+						<optgroup label="Survival Mode">
+							<option value="survival"> - S - Asylum of the Daleks</option>
+							<option value="pacifist"> - P - Into the Dalek</option>
+						</optgroup>
+					</select>
+				</div>
+				<div class="menuContent" id="objectif">
+					Goal
+				</div>
+				<div class="menuContent" id="instructions">
+					Controls
+				</div>
+				<div class="menuContent" id="enemiesList">
+					Enemies
+				</div>
+				<div class="menuContent" id="copyright">
+					Copyright
+				</div>
+			</div>
+			<div id="gameOverDiv">
+				<div id="closeGameOver">
+					<img src="./images/croix.png" />
+				</div>
+				<div id="gameOver_text"></div>
+				<div id="recommencer"> Play Again </div>
+			</div>
+			
+		</div>
+		<div class="infoDiv" id="goalDiv" draggable="true">
+			<div class="close" id="closeGoal">
+				<img src="./images/croix.png" />
+			</div>
+			<div class="div_text" id="goal_text">
+				<h1>Goal</h1>
+				<h2>Normal Mode :</h2>
+				<p>
+					Difficulty is defined at the beginning and does not change.
+					<br>
+					You earn points by killing enemies.
+				</p>
+				<h2>Survival Mode :</h2>
+					<h3>Asylum of the Daleks :</h3>
+					<p>
+						Difficulty is easy at first, but increases with time.
+						<br>
+						You earn points by killing enemies and by staying alive.
+					</p>
+					<h3>Into the Dalek :</h3>
+					<p>
+						Difficulty is easy at first, but increases with time.
+						<br>
+						You earn points by staying alive.
+						<br>
+						Beware : YOU CANNOT ATTACK !
+					</p>	
+			</div>
+		</div>
+		<div class="infoDiv" id="controlDiv" draggable="true">
+			<div class="close" id="closeControl">
+				<img src="./images/croix.png" />
+			</div>
+			<div class="div_text" id="control_text">
+				<h1>Controls</h1>
+				<h2>How to play :</h2>
+				<p>
+					Use the directional keys in order to move.
+					<br>
+					Press Space in order to shoot.
+				</p>
+				<h2>Keyboard Shortcuts :</h2>
+				<p>
+					P : Run/pause the game
+					<br>
+					R : Start new game
+					<br>
+					S : Enable/disable sound
+				</p>
+	
+			</div>
+		</div>
+		<div class="infoDiv" id="enemiesDiv" draggable="true">
+			<div class="close" id="closeEnemies">
+				<img src="./images/croix.png" />
+			</div>
+			<div class="div_text" id="enemies_text">
+				<h1>Enemies</h1>
+				<img id="imgEnemies" src="./images/enemies.png" alt="List of enemies" /img>	
+			</div>
+		</div>
+		<div class="infoDiv" id="copyrightDiv" draggable="true">
+			<div class="close" id="closeCopyright">
+				<img src="./images/croix.png" />
+			</div>
+			<div class="div_text" id="copyright_text">
+				<h1>Copyright</h1>
+				<h2>Soundtrack :</h2>
+				<p>
+					The soundtrack is labelled Silva Screen Records and produced by Murray Gold.
+					<br>
+					<br>
+					The following songs can be heard: <em>'Battle In The Sky', 'Down to Earth', 'I am The Doctor in Utah', 'Little Amy - The Apple', 'Pop', 'The Council of the Time Lords', 'The Pandorica', 'Unit', 'Words Win Wars', 'Zero'.</em>
+				</p>
+				<h2>General : </h2>
+				<p>
+					Doctor Who is © BBC
+				</p>
+	
+			</div>
+		</div>
+		<script type="text/javascript" src="./script/all.js"></script>
+		<script type="text/javascript" src="./script/sound.js"></script> 
+	</body>
+</html>
